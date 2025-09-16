@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+    cursor: none;
+}
+#block{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+#dvd{
+    position: absolute;
+    width: 250px;
+    height: 100px;
+}
