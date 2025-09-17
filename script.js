@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let velX = 2;
     let velY = 2;
 
+    function clicou(){
+        posX = Math.floor(Math.random() * (bg.clientWidth - dvd.clientWidth));
+        posY = Math.floor(Math.random() * (bg.clientHeight - dvd.clientHeight));
+        dvd.style.left = `${posX}px`;
+        dvd.style.top = `${posY}px`;
+
+        velX = Math.floor(Math.random() *7)
+        while(velX < 2){
+            velX=Math.floor(Math.random() * 7)
+        }
+        velY=velX
+        }
+
+    dvd.addEventListener('click',clicou);
+
     window.addEventListener('resize', () => {
         const newHeight = bg.clientHeight;
         const newWidth = bg.clientWidth;
