@@ -31,16 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
         velXant =velX;
         velYant = velY;
         if(velX > 0){
-            velX = 2;
+            velX = 1;
         }
         else{
-            velX = -2;
+            velX = -1;
         }
         if(velY > 0){
-            velY = 2;
+            velY = 1;
         }
         else{
-            velY = -2;
+            velY = -1;
         }
     }
 
