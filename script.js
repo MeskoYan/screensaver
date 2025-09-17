@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let velX = 2;
     let velY = 2;
+    let velXant =2;
+    let velYant = 2;
 
     function clicou(){
         posX = Math.floor(Math.random() * (bg.clientWidth - dvd.clientWidth));
@@ -14,14 +16,42 @@ document.addEventListener('DOMContentLoaded', () => {
         dvd.style.left = `${posX}px`;
         dvd.style.top = `${posY}px`;
 
-        velX = Math.floor(Math.random() *7)
+        velX = Math.floor(Math.random() *11);
         while(velX < 2){
-            velX=Math.floor(Math.random() * 7)
+            velX=Math.floor(Math.random() * 7);
         }
-        velY=velX
+        velY = velX;
+        velXant =velX;
+        velYant = velY;
         }
 
     dvd.addEventListener('click',clicou);
+
+    function slow(){
+        velXant =velX;
+        velYant = velY;
+        if(velX > 0){
+            velX = 2;
+        }
+        else{
+            velX = -2;
+        }
+        if(velY > 0){
+            velY = 2;
+        }
+        else{
+            velY = -2;
+        }
+    }
+
+    dvd.addEventListener('mouseover',slow);
+
+    function back(){
+        velX=velXant;
+        velY=velYant;
+    }
+
+    dvd.addEventListener('mouseout',back);
 
     window.addEventListener('resize', () => {
         const newHeight = bg.clientHeight;
